@@ -36,10 +36,14 @@ var bio = {
     "mobile": "703-801-8509",
     "twitter": "@wahoopcc",
     "github": "pcreglow",
-    "location": "Orlando, FL"
+    "location": "Orlando, FL",
+    "portfolio": "http://pcreglow.github.io/"
   },
-  "photo": "images/fry.jpg",
-  "welcomeMessage": "I am a Junior Web Developer with 10 years of political and legislative advocacy experience."
+  "photo": "images/creglow.jpg",
+  "welcomeMessage": "I am a Junior Web Developer with 10 years of political and legislative advocacy experience.",
+  "skills": [
+    "AngularJS", "Bootstrap", "CSS", "Firebase", "Git", "GitHub", "Gulp", "HTML5", "JavaScript", "JQuery", "JSON", "Sass", "Yeoman"
+  ]
 };
 
 var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
@@ -54,6 +58,9 @@ $("#header").append(formattedGithub);
 var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
 $("#header").append(formattedTwitter);
 
+var formattedPortfolio = HTMLportfolio.replace("%data%", bio.contacts.portfolio);
+$("#header").append(formattedPortfolio);
+
 var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
 $("#header").append(formattedLocation);
 
@@ -62,6 +69,12 @@ $("#header").append(formatted_welcomeMessage);
 
 var formatted_bioPic = HTMLbioPic.replace("%data%", bio.photo);
 $("#header").append(formatted_bioPic);
+
+$("#header").append(HTMLskillsStart);
+
+var formattedSkills = HTMLskills.replace("%data%", bio.skills);
+$("#header").append(formattedSkills);
+
 
 
 var workExperience = {
