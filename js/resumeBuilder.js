@@ -19,30 +19,52 @@ console.log(email);
 console.log(newEmail);
 */
 
-var formattedName = HTMLheaderName.replace("%data%", "Phillip Creglow");
+var formattedName = HTMLheaderName.replace("%data%", "Phillip Clark Creglow");
 
-var role = "Junior Web Developer";
+var role = "Junior Web Developer & Strategic Political Consultant";
 var formattedRole = HTMLheaderRole.replace("%data%", role);
 
 $("#header").prepend(formattedRole);
 $("#header").prepend(formattedName);
 
+
 var bio = {
-  "name": "Phillip",
-  "role": "Junior Web Developer/Strategic Political Consultant",
+  "name": "Phillip Clark Creglow",
+  "role": "Junior Web Developer & Strategic Political Consultant",
   "contacts": {
     "email": "phillipcreglow@msn.com",
-    "phone": "703-801-8509",
+    "mobile": "703-801-8509",
     "twitter": "@wahoopcc",
     "github": "pcreglow",
     "location": "Orlando, FL"
   },
-  "photo": "images/fry.jpg"
+  "photo": "images/fry.jpg",
+  "welcomeMessage": "I am a Junior Web Developer with 10 years of political and legislative advocacy experience."
 };
 
-//$("#main").append(bio.role);
+var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
+$("#header").append(formattedEmail);
 
-var work = {
+var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
+$("#header").append(formattedMobile);
+
+var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
+$("#header").append(formattedGithub);
+
+var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
+$("#header").append(formattedTwitter);
+
+var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
+$("#header").append(formattedLocation);
+
+var formatted_welcomeMessage = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
+$("#header").append(formatted_welcomeMessage);
+
+var formatted_bioPic = HTMLbioPic.replace("%data%", bio.photo);
+$("#header").append(formatted_bioPic);
+
+
+var workExperience = {
   "jobs": [{
     "position": "Junior Web Developer/Strategic Political Consultant",
     "employer": "TargetSmart Communications",

@@ -145,8 +145,11 @@ a {
   padding: 2.5% 5%;
 }
 
-ul {
+ul,
+li {
   list-style-type: none;
+  display: inline-block;
+  margin: 0 15px 0 0;
 }
 
 .biopic {
@@ -162,6 +165,8 @@ img {
 
 span {
   padding: 5px;
+  font-size: 18px;
+  color: #fff;
 }
 
 #lets-connect {
